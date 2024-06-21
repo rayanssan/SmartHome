@@ -75,17 +75,17 @@ class Bathroom extends Environment {
      * @param {HTMLElement} element - The HTML element triggering the flush toilet feature.
      */
     flushToilet(element) {
-        let isToiletSkibiding = false;
+        let isToiletFlushing = false;
         let previousText = element.innerText;
 
         element.addEventListener("click", () => {
-            if (!isToiletSkibiding) {
-                isToiletSkibiding = true;
+            if (!isToiletFlushing) {
+                isToiletFlushing = true;
                 document.body.style.pointerEvents = "none";
                 element.style.filter = "drop-shadow(0 0 0.35rem blue)";
-                let skibidiToilet = new Audio("./media/sounds/skibidi.mp3");
-                skibidiToilet.volume = "0.09";
-                skibidiToilet.play();
+                let flushToilet = new Audio("./media/sounds/toilet.mp3");
+                flushToilet.volume = "0.09";
+                flushToilet.play();
                 element.innerText = "•";
                 setTimeout(() => {
                     element.innerText = "• •";
@@ -98,8 +98,8 @@ class Bathroom extends Environment {
                     element.style.backgroundColor = "blue";
                     element.style.color = "white";
 
-                    skibidiToilet.addEventListener('ended', () => {
-                        isToiletSkibiding = false;
+                    flushToilet.addEventListener('ended', () => {
+                        isToiletFlushing = false;
                         editEnvironmentButton.style.display = "flex";
                         document.body.style.removeProperty("pointer-events");
                         element.style.removeProperty("background-color");
