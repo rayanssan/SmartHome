@@ -1,0 +1,74 @@
+/* This stylesheet contains only styles related to the speakers functionality */
+
+#environments-routine-outer-window #environments:has(.speakers-window) {
+  max-width: 700px;
+}
+
+.speakers-window {
+  width: 85vw;
+
+  & iframe {
+    display: flex;
+  }
+}
+
+.playlist-button-forward {
+  float: inline-end;
+}
+.playlist-button-backward {
+  float: inline-start;
+}
+.playlist-button-forward:not(.preference, .environment, .return-button, .paddle, .climate-submit-button), 
+.playlist-button-backward:not(.preference, .environment, .return-button, .paddle, .climate-submit-button) {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 100px;
+  height: 45px;
+  width: 45px;
+}
+
+.speakers-window select {
+  display: flex;
+  margin: auto;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  scale: 1.1;
+}
+
+.speakers-window .speakers-submit-button {
+  margin: auto;
+  margin-top: 25px;
+  background-color: transparent;
+  box-shadow: none;
+  width: 100%;
+  cursor: auto;
+  &:hover, &:active {
+    filter: none
+  }
+}
+
+#environment-selection .speakers-window p:not(.add-products-text, #add-environments-selection p, .climate-window p, .lights-window p, .blind-window p) {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  font-size: larger;
+  width: fit-content;
+}
+
+.speakers-power-button:not(.preference, .environment, .return-button, .paddle, .climate-submit-button) {
+  width: 185px;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 100px;
+  margin-top: 20px;
+}
+
+.speakers-window:not(.speakers-window:has(select)) .speakers-power-button {
+  margin-top: -10px;
+}
+
+#speakers-range-container {
+  margin-top: 30px;
+  margin-bottom: 25px;
+}

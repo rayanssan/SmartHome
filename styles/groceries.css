@@ -1,0 +1,391 @@
+/* This stylesheet contains only styles related to the SmartHome Groceries page */
+
+#SmartHomeGroceriesPage #logo {
+  background-image: linear-gradient(45deg, #d63784, #701616);
+
+  & p {
+    color: white;
+  }
+}
+
+#welcome {
+  background-image: linear-gradient(230deg, #d63784, #701616);
+  color: white; 
+  display: flex;
+  flex-direction: column;
+
+  & span {
+    font-size: 20px;
+  }
+}
+
+h2 {
+  margin: 0;
+  font-weight: lighter;
+}
+
+#payment-method-choice h2 {
+  font-size: 20px;
+}
+
+#payment-method-choice h2:first-child {
+  padding: 5px;
+}
+
+#search-products-bar {
+  margin: auto;
+}
+
+#SmartHomeGroceriesPage #content-windows {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+
+#search-products-bar label {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline;
+  white-space: nowrap;
+  max-width: 90%;
+  padding-bottom: 10px;
+}
+
+#search-wrapper .form-group input:focus+label, #search-wrapper .form-group input:not(:placeholder-shown)+label {
+  top: 3px;
+}
+
+#stores-text:has(.search-results-text) {
+  visibility: hidden;
+}
+
+.search-results-text {
+  position: absolute;
+  visibility: visible;
+  overflow: hidden;
+  width: 70%;
+  text-overflow: ellipsis;
+}
+
+#content-windows #stores {
+  max-width: 900px;
+}
+
+#search-products-input {
+  padding-left: 35px;
+  padding-right: 35px;
+  width: 70vw;
+  max-width: 880px;
+}
+
+#search-products-bar label svg {
+  transition: all 0.5s;
+  margin-right: 4px;
+}
+
+#search-products-bar label span {
+  text-overflow: ellipsis;
+  transition: all 0.5s;
+  position: relative;
+  top: -2px;
+}
+
+#search-products-input:not(:-moz-placeholder-shown) + label svg {
+  position: relative;
+  transform: translate(0, 8px);
+}
+
+#search-products-input:focus + label svg,
+#search-products-input:not(:placeholder-shown) + label svg {
+  position: relative;
+  transform: translate(0, 8px);
+}
+
+#stores-selection {
+  padding: 10px;
+  display: flex;
+  justify-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-height: 720px;
+  overflow: auto;
+}
+
+.groceries-store-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.groceries-store-product img {
+  border-radius: 10px;
+  margin: 5px;
+  width: 200px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+.groceries-store-product p {
+  width: 200px;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.groceries-store-product p:not(.grocery-product-name) {
+  text-align: center;
+}
+
+.groceries-store-product p:nth-of-type(2) {
+  font-weight: bold;
+}
+
+.groceries-store-product div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.groceries-store-product div input {
+  width: 55px;
+}
+
+.groceries-store-product div button:not(.plus-button, .minus-button) {
+  background-color: green;
+  color: white;
+  max-width: 110px;
+  height: 60px;
+}
+
+.store {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.store p {
+  width: 100px;
+}
+
+.store p:first-of-type {
+  margin-top: 10px;
+}
+
+#stores-selection {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3px;
+}
+
+.store > div {
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 11vw;
+  height: 11vw;
+  background-size: cover;
+  margin: 0;
+  border-radius: 10px;
+  max-width: 125px;
+  max-height: 125px;
+  min-width: 90px;
+  min-height: 90px;
+  cursor: pointer;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+#cash-payment-message {
+  font-size: larger;
+  display: none;
+}
+
+#credit-card-form {
+  font-size: 14.5px;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: none;
+  align-content: center;
+}
+
+#credit-card-form input {
+  max-width: 210px;
+  min-width: 140px;
+  width: 40vw;
+}
+
+#credit-card-form .form-group {
+  margin: 0;
+}
+
+#credit-card-form input[type=month] {
+  max-width: 200px;
+}
+
+#payment-button {
+  width: 100%;
+  margin: auto; 
+  color: white; 
+  background-color: green
+}
+
+#cart-count {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#cart-view {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: 230px;
+  left: 0;
+  right: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 10px;
+  top: 70px;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 10px;
+  flex-flow: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+
+  & ul {
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+#cart-view .confirmation-box p {
+  color: white;
+}
+
+#cart-list {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  max-height: 300px;
+  overflow: auto;
+}
+
+#cart-list .cart-item-count {
+  width: 25px;
+  text-align: center;
+}
+
+#cart-list p {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#cart-list p button {
+  margin: 0;
+  height: 30px;
+  width: 30px;
+  border-radius: 100px;
+  background: white;
+  color: black;
+}
+
+#cart-list .delete-cart-item-button:not(.preference, .environment, .return-button, .paddle, .climate-submit-button) {
+  color: white;
+  background: red;
+}
+
+#remove-all-cart-items-button {
+  margin-right: 0;
+}
+
+#payment-method-choice {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#credit-card-form:has(input[type=month]:focus) label[for="card-expiry-date"] {
+  color: navy;
+}
+
+#card-expiry-date:focus-visible {
+  outline: none;
+}
+
+#credit-card-form:has(input[type=month]:focus-visible) .month-input-wrapper {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
+
+  & div {
+    display: flex; 
+    flex-direction: column;
+    align-items: baseline;
+    width: 100%;
+
+    & p:first-of-type {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 245px;
+    }
+  }
+}
+
+.cart-item .subp {
+  margin-top: -5px;
+  margin-bottom: 10px;
+  padding-top: 0;
+  margin-left: 5px;
+}
+
+.cart-item:not(.cart-item:last-child) {
+  border-bottom: gray 0.5px solid;
+}
+
+#ok-purchase-button {
+  color: white;
+  background: green;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#SmartHomeGroceriesPage #grocery-product-description {
+  gap: 30px;
+  margin-bottom: 30px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 10px;
+  padding-top: 0px;
+}
+
+.store-banner {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+
+  & img {
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+    width: 100%;
+    max-height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+}

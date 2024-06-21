@@ -1,0 +1,59 @@
+/* This stylesheet contains only styles related to the general preferences */
+
+/* General preferences icons */
+#climate {
+  background-image: url("../media/images/climate-icon.png"), linear-gradient(45deg, #add, #191bc9);
+}
+
+#lights {
+  background-image: url("../media/images/lights-icon.png"), linear-gradient(45deg, orange, rgb(155, 106, 25));
+}
+
+#chatGPT {
+  background-image: url("../media/images/chatGPT-icon.png"), linear-gradient(45deg, green, black);
+}
+
+#blinds-button {
+  background-image: url("../media/images/blinds-icon.png"), linear-gradient(45deg, #7f8546, wheat);
+}
+
+#vacuum-robot {
+  background-image: url("../media/images/vacuum-robot-icon.png"), linear-gradient(45deg, #7979d0, purple);
+}
+
+#groceries {
+  background-image: url("../media/images/groceries-icon.png"), linear-gradient(45deg, #701616, #d63784);
+}
+
+#general-home-preferences-selection > div.preference {
+  padding: 0;
+}
+
+.preference #climate,
+.preference #lights,
+.preference #chatGPT,
+.preference #blinds-button,
+.preference #vacuum-robot,
+.preference #groceries {
+  max-width: 70px;
+  max-height: 70px;
+}
+
+#general-home-preferences-selection {
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ChatGPT iframe */
+#ICG-iframe {
+  height: 500px;
+  width: 100%;
+  border: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  clip-path: polygon(0 0, 100% 0, 100% 93%, -100% 93%);
+  margin-bottom: -45px;
+}

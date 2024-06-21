@@ -1,0 +1,259 @@
+/* Login/Registry part*/
+
+body#SmartHomeAddUserPage {
+  background-image: url("../media/images/living-room.jpg");
+}
+
+.add-user-window,
+.add-permission-window,
+.add-icon-window {
+  color: #000;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffffb3;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  margin: auto;
+  width: 80vw;
+  max-width: 490px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+.window.add-permission-window {
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+}
+
+.windows.show-permissions .window.add-permission-window {
+  opacity: 1;
+  display: block;
+  pointer-events: auto;
+}
+
+.windows.show-permissions .window.add-user-window {
+  display: none;
+}
+
+.window.add-environments-window {
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+}
+
+.windows.show-environments .window.add-environments-window {
+  opacity: 1;
+  display: block;
+  pointer-events: auto;
+}
+
+.windows.show-environments .window.add-user-window {
+  display: none;
+}
+
+#environmentsSelect {
+  max-height: 200px;
+  overflow: auto;
+
+  & input[type="checkbox"] {
+    scale: 1.5;
+    transform: translate(-2px, -3.5px);
+    margin-bottom: 5px;
+  }
+  & input[type="checkbox"]:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.window.add-icon-window {
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+}
+
+.windows.show-icons .window.add-icon-window {
+  opacity: 1;
+  display: block;
+  pointer-events: auto;
+}
+
+.windows.show-icons .window.add-user-window {
+  display: none;
+}
+
+.addUser-text {
+  justify-content: center;
+  text-align: center;
+  font-size: 36px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+  align-items: center;
+  margin: auto;
+}
+
+input[type=password] {
+  height: 30px;
+  font-size: 15px;
+  min-width: 150px;
+  width: 60vw;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  border-radius: 10px;
+  background-color: white;
+  padding: 15px;
+  padding-bottom: 0px;
+}
+
+.perm {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#permText {
+  margin: auto;
+  text-align: center;
+}
+
+#permissionsList {
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  padding-bottom: 0;
+}
+
+#permissions {
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#iconsList {
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  padding-bottom: 0;
+}
+
+#user1, #user2, #user3{
+  height: 100px;
+}
+
+#icons {
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.add-user-window .subp {
+  text-align: center;
+}
+
+.add-user-window:has(#admin:checked) {
+  & #environmentsSelect {
+    display: none;
+  }
+}
+
+/* The container */
+.admin {
+  display: block;
+  width: 70%;
+  margin: auto;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.admin input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #8d8c8c;
+}
+
+/* On mouse-over, add a grey background color */
+.admin:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.admin input:checked~.checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.admin input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.admin .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.confirmButtonWrapper {
+  flex-direction: row-reverse;
+  display: flex;
+}
+
+#addButton, .confirmButton, .link_perm.confirmButton, .link_icon.confirmButton {
+  color: white;
+  background-color: green;
+}
+
+#addButton:disabled {
+  cursor: not-allowed;
+  background-color: grey;
+}

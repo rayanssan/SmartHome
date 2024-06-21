@@ -1,0 +1,97 @@
+/* This stylesheet contains only styles related to the lights functionality */
+
+.lights-window {
+  gap: 10px;
+  width: 85vw;
+  zoom: 0.9;
+}
+
+.lights-power-button:not(.preference, .environment, .return-button, .paddle, .climate-submit-button) {
+  width: 185px;
+  margin: auto;
+  padding: 10px;
+  border-radius: 100px;
+}
+
+#lights-1,
+#lights-2,
+#lights-3 {
+  font-size: larger;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 50px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+#general-home-preferences .lights-window {
+  flex-direction: column;
+  margin: auto;
+  padding: 0;
+}
+
+.lights-window select {
+  width: 40%;
+  min-width: 200px;
+}
+
+#lights-1 {
+  background-color: rgb(55, 55, 55);
+  color: white;
+}
+
+#lights-2 {
+  background-color: rgb(142, 142, 142);
+  color: white;
+}
+
+#lights-3 {
+  background-color: white;
+}
+
+.lights-window label,
+#lights-intensity-text {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: center;
+  margin-left: clamp(20px, 20vw, 180px);
+  margin-right: clamp(20px, 20vw, 180px);
+  white-space: nowrap;
+}
+
+#lights-intensity-text {
+  white-space: unset;
+}
+
+#color-palette::-webkit-color-swatch {
+  border: 2px solid orange;
+  border-radius: 50px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+}
+#color-palette::-webkit-color-swatch:hover {
+  filter: drop-shadow(0 0 0.75rem rgb(255, 205, 106));
+}
+#color-palette::-webkit-color-swatch:active {
+  filter: drop-shadow(0 0 0.75rem orange);
+}
+
+#color-palette {
+  border: none;
+  display: block;
+  background: none;
+  cursor: pointer;
+  height: 65px;
+  width: 185px;
+  margin-right: clamp(20px, 10vw, 150px);
+  margin-left: clamp(20px, 10vw, 150px);
+  margin-bottom: 5px;
+}
+
+.lights-window button.lights-submit-button {
+  background-color: green;
+  width: 70%;
+  color: white;
+}

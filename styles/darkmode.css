@@ -1,0 +1,487 @@
+/* Dark mode styles */
+
+@media (prefers-color-scheme: dark) {
+
+  body.darkmode #climate-stats,
+  body.darkmode #current-time,
+  body.darkmode #profiles,
+  body.darkmode #general-home-preferences,
+  body.darkmode #routine-window,
+  body.darkmode #environments,
+  body.darkmode #stores,
+  body.darkmode h1,
+  body.darkmode #activitybox, 
+  body.darkmode #listbox,
+  body.darkmode details,
+  body.darkmode #add-permission-window,
+  body.darkmode button,
+  body.darkmode .AC-power-button,
+  body.darkmode .lights-power-button,
+  body.darkmode .speakers-power-button,
+  body.darkmode .fireplace-power-button,
+  body.darkmode .TV-power-button,
+  body.darkmode #profileContainer button,
+  body.darkmode #profileContainer p,
+  body.darkmode #add-user-window,
+  body.darkmode #add-icon-window,
+  body.darkmode .window {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+  }
+
+  body.darkmode span,
+  body.darkmode #climate-stats p,
+  body.darkmode #climate-stats div,
+  body.darkmode #climate-stats input,
+  body.darkmode #climate-stats label,
+  body.darkmode #current-time p,
+  body.darkmode #profiles p,
+  body.darkmode #current-time div,
+  body.darkmode #current-time input,
+  body.darkmode #current-time label,
+  body.darkmode #general-home-preferences p,
+  body.darkmode #general-home-preferences div,
+  body.darkmode #general-home-preferences input,
+  body.darkmode #general-home-preferences label,
+  body.darkmode #routine-window p,
+  body.darkmode #routine-window div,
+  body.darkmode #routine-window input,
+  body.darkmode #routine-window label,
+  body.darkmode #environments p,
+  body.darkmode #environments div,
+  body.darkmode #environments input,
+  body.darkmode .add-user-window input,
+  body.darkmode #add-icon-window p,
+  body.darkmode #environments label,
+  body.darkmode .add-user-window .form-group label,
+  body.darkmode #stores p,
+  body.darkmode #stores div,
+  body.darkmode #stores input,
+  body.darkmode #stores label,
+  body.darkmode h1 p,
+  body.darkmode .subp:not(.cart-item .subp),
+  body.darkmode #tempdemo,
+  body.darkmode h1 div,
+  body.darkmode h1 input,
+  body.darkmode h1 label,
+  body.darkmode .add-user-window p,
+  body.darkmode #general-home-preferences select,
+  body.darkmode #routine-window select,
+  body.darkmode #environments select,
+  body.darkmode #stores select,
+  body.darkmode h1 select,
+  body.darkmode #activitybox p, 
+  body.darkmode #listbox p,
+  body.darkmode #add-permission-window p,
+  body.darkmode .window p {
+    color: white;
+  }
+
+  body.darkmode input[type=time],
+  body.darkmode input[type=checkbox],
+  body.darkmode input[type=radio],
+  body.darkmode input[type=range],
+  body.darkmode #current-time input[type=time],
+  body.darkmode #current-time #search-products-input,
+  body.darkmode #general-home-preferences input[type=time],
+  body.darkmode #general-home-preferences #search-products-input,
+  body.darkmode #routine-window input[type=time],
+  body.darkmode #routine-window #search-products-input,
+  body.darkmode #environments input[type=time],
+  body.darkmode #environments #search-products-input,
+  body.darkmode #stores input[type=time],
+  body.darkmode #stores #search-products-input,
+  body.darkmode h1 input[type=time],
+  body.darkmode h1 #search-products-input {
+    color-scheme: dark;
+  }
+
+  body.darkmode .return-button,
+  body.darkmode #general-home-preferences .return-button,
+  body.darkmode #general-home-preferences #add-products-selection button,
+  body.darkmode #routine-window .return-button,
+  body.darkmode #routine-window #add-products-selection button,
+  body.darkmode #environments .return-button,
+  body.darkmode #environments #add-products-selection button,
+  body.darkmode #stores .return-button,
+  body.darkmode #stores #add-products-selection button,
+  body.darkmode h1 .return-button,
+  body.darkmode h1 #add-products-selection button,
+  body.darkmode .checkmark,
+  body.darkmode #permissions,
+  body.darkmode .edit-environment-products-list,
+  body.darkmode details .plus-button, body.darkmode details .minus-button,
+  body.darkmode #add-user-window #icons,
+  body.darkmode .number-input-button-wrapper .plus-button,
+  body.darkmode .number-input-button-wrapper .minus-button,
+  body.darkmode #routinesWindow #tempbuts #temp-plus,
+  body.darkmode #routinesWindow #tempbuts #temp-minus,
+  body.darkmode button {
+    background-color: rgba(99, 99, 99, 0.7);
+    color: white;
+  }
+
+  body.darkmode #general-home-preferences .return-button path,
+  body.darkmode #general-home-preferences #add-products-selection button path,
+  body.darkmode #routine-window .return-button path,
+  body.darkmode #routine-window #add-products-selection button path,
+  body.darkmode #environments .return-button path,
+  body.darkmode #environments #add-products-selection button path,
+  body.darkmode #stores .return-button path,
+  body.darkmode #stores #add-products-selection button path,
+  body.darkmode h1 .return-button path,
+  body.darkmode h1 #add-products-selection button path {
+    color: white;
+  }
+
+  body.darkmode #set-routine-button-main {
+    background-color: rgba(99, 99, 99, 0.7);
+    color: white;
+  }
+
+  body.darkmode #permissionsList button {
+    color: black;
+    background-color: white;
+  }
+
+  body.darkmode #add-environment-button,
+  body.darkmode #add-profile-button {
+    fill: white;
+  }
+
+  body.darkmode #expand-environments-button, body.darkmode #edit-environment-button,
+  body.darkmode .paddle {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: black;
+  }
+
+  body.darkmode button.grocery-product-info,
+  body.darkmode #general-home-preferences .AC-temp-window button,
+  body.darkmode #general-home-preferences .AC-fan-speed button,
+  body.darkmode #general-home-preferences .environment-preference-button,
+  body.darkmode #routine-window input:not(input.AC-temp-display),
+  body.darkmode #routine-window .environment-preference-button,
+  body.darkmode #environments input:not(input.AC-temp-display),
+  body.darkmode #environments .environment-preference-button,
+  body.darkmode #stores input:not(input.AC-temp-display),
+  body.darkmode #stores .environment-preference-button,
+  body.darkmode h1 input:not(input.AC-temp-display),
+  body.darkmode h1 .environment-preference-button,
+  body.darkmode .add-user-window input {
+    background-color: rgba(99, 99, 99, 0.7);
+    color: white;
+  }
+
+  body.darkmode #general-home-preferences select,
+  body.darkmode #routine-window select,
+  body.darkmode #environments select,
+  body.darkmode #stores select,
+  body.darkmode h1 select,
+  body.darkmode #add-user-window #environmentsSelectSelect {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>') no-repeat right rgb(99, 99, 99);
+    background-position: right 10px center;
+    color: white;
+  }
+
+  body.darkmode select:disabled {
+    background: gray !important;
+  }
+
+  body.darkmode #general-home-preferences select:focus,
+  body.darkmode #routine-window select:focus,
+  body.darkmode #environments select:focus,
+  body.darkmode #stores select:focus,
+  body.darkmode h1 select:focus,
+  body.darkmode #add-user-window #environmentsSelectSelect:focus {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-chevron-up" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/></svg>') no-repeat right rgb(99, 99, 99);
+    background-position: right 10px center;
+  }
+
+  body.darkmode input::-moz-placeholder {
+    color: lightgray;
+  }
+
+  body.darkmode input::placeholder {
+    color: lightgray;
+  }
+
+  body.darkmode .add-environment-checkmark {
+    color: #00ff00 !important;
+  }
+
+  body.darkmode #return-from-page-button {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+  }
+
+  body.darkmode #return-from-page-button path {
+    fill: white;
+  }
+
+  body.darkmode #logo {
+    background-color: rgba(255, 166, 0, 0.7);
+  }
+
+  body.darkmode #card-method-choice-button,
+  body.darkmode #cash-method-choice-button {
+    background-color: white;
+	color: black;
+  }
+
+  body.darkmode #search-wrapper p,
+  body.darkmode #search-wrapper div,
+  body.darkmode #search-wrapper input,
+  body.darkmode #search-wrapper label {
+    color: white;
+  }
+
+  body.darkmode #search-wrapper #search-products-input, body.darkmode #slider_thumb {
+    background-color: rgb(99, 99, 99);
+    color: white;
+  }
+
+  body.darkmode #search-wrapper #search-products-input path {
+    color: white;
+  }
+}
+
+body.darkmode #climate-stats,
+body.darkmode #profiles,
+body.darkmode #current-time,
+body.darkmode #general-home-preferences,
+body.darkmode #routine-window,
+body.darkmode #environments,
+body.darkmode #stores,
+body.darkmode h1,
+body.darkmode #activitybox, 
+body.darkmode #listbox,
+body.darkmode details,
+body.darkmode #add-permission-window,
+body.darkmode .AC-power-button,
+body.darkmode .lights-power-button,
+body.darkmode .speakers-power-button,
+body.darkmode .fireplace-power-button,
+body.darkmode .TV-power-button,
+body.darkmode #profileContainer button,
+body.darkmode #profileContainer p,
+body.darkmode #add-user-window,
+body.darkmode #add-icon-window,
+body.darkmode .window {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+body.darkmode span,
+body.darkmode #profiles p,
+body.darkmode #climate-stats p,
+body.darkmode #climate-stats div,
+body.darkmode #climate-stats input,
+body.darkmode #climate-stats label,
+body.darkmode #current-time p,
+body.darkmode #current-time div,
+body.darkmode #current-time input,
+body.darkmode #current-time label,
+body.darkmode #general-home-preferences p,
+body.darkmode #general-home-preferences div,
+body.darkmode #general-home-preferences input,
+body.darkmode #general-home-preferences label,
+body.darkmode #routine-window p,
+body.darkmode #routine-window div,
+body.darkmode #routine-window input,
+body.darkmode #routine-window label,
+body.darkmode #environments p,
+body.darkmode #environments div,
+body.darkmode #environments input,
+body.darkmode .add-user-window input,
+body.darkmode #add-icon-window p,
+body.darkmode #environments label,
+body.darkmode #stores p,
+body.darkmode .subp:not(.cart-item .subp),
+body.darkmode #tempdemo,
+body.darkmode #stores div,
+body.darkmode #stores input,
+body.darkmode #stores label,
+body.darkmode h1 p,
+body.darkmode h1 div,
+body.darkmode h1 input,
+body.darkmode h1 label,
+body.darkmode .add-user-window .form-group label,
+body.darkmode #general-home-preferences select,
+body.darkmode #routine-window select,
+body.darkmode #environments select,
+body.darkmode #stores select,
+body.darkmode h1 select,
+body.darkmode .add-user-window p,
+body.darkmode #activitybox p, 
+body.darkmode #listbox p,
+body.darkmode #add-permission-window p,
+body.darkmode .window p {
+  color: white;
+}
+
+body.darkmode input[type=time],
+body.darkmode input[type=checkbox],
+body.darkmode input[type=radio],
+body.darkmode input[type=range],
+body.darkmode #current-time input[type=time],
+body.darkmode #general-home-preferences input[type=time],
+body.darkmode #routine-window input[type=time],
+body.darkmode #routine-window #search-products-input,
+body.darkmode #environments input[type=time],
+body.darkmode #environments #search-products-input,
+body.darkmode #stores input[type=time],
+body.darkmode #stores #search-products-input,
+body.darkmode h1 input[type=time],
+body.darkmode h1 #search-products-input {
+  color-scheme: dark;
+}
+
+body.darkmode .return-button,
+body.darkmode #general-home-preferences .return-button,
+body.darkmode #general-home-preferences #add-products-selection button,
+body.darkmode #routine-window .return-button,
+body.darkmode #routine-window #add-products-selection button,
+body.darkmode #environments .return-button,
+body.darkmode #environments #add-products-selection button,
+body.darkmode #stores .return-button,
+body.darkmode #stores #add-products-selection button,
+body.darkmode h1 .return-button,
+body.darkmode h1 #add-products-selection button,
+body.darkmode .checkmark,
+body.darkmode #permissions,
+body.darkmode .edit-environment-products-list,
+body.darkmode details .plus-button, body.darkmode details .minus-button,
+body.darkmode #add-user-window #icons,
+body.darkmode .number-input-button-wrapper .plus-button,
+body.darkmode .number-input-button-wrapper .minus-button,
+body.darkmode #routinesWindow #tempbuts #temp-plus,
+body.darkmode #routinesWindow #tempbuts #temp-minus,
+body.darkmode button {
+  background-color: rgba(99, 99, 99, 0.7);
+  color: white;
+}
+
+body.darkmode #current-time .return-button path,
+body.darkmode #current-time #add-products-selection button path,
+body.darkmode #general-home-preferences .return-button path,
+body.darkmode #general-home-preferences #add-products-selection button path,
+body.darkmode #routine-window .return-button path,
+body.darkmode #routine-window #add-products-selection button path,
+body.darkmode #environments .return-button path,
+body.darkmode #environments #add-products-selection button path,
+body.darkmode #stores .return-button path,
+body.darkmode #stores #add-products-selection button path,
+body.darkmode h1 .return-button path,
+body.darkmode h1 #add-products-selection button path {
+  color: white;
+}
+
+body.darkmode #set-routine-button-main {
+  background-color: rgba(99, 99, 99, 0.7);
+  color: white;
+}
+
+body.darkmode #permissionsList button {
+  color: black;
+  background-color: white;
+}
+
+body.darkmode #add-environment-button,
+body.darkmode #add-profile-button {
+  fill: white;
+}
+
+body.darkmode #expand-environments-button, body.darkmode #edit-environment-button,
+body.darkmode .paddle {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+}
+
+body.darkmode button.grocery-product-info,
+body.darkmode #general-home-preferences .AC-temp-window button,
+body.darkmode #general-home-preferences .AC-fan-speed button,
+body.darkmode #general-home-preferences .environment-preference-button,
+body.darkmode #routine-window input:not(input.AC-temp-display),
+body.darkmode #routine-window .environment-preference-button,
+body.darkmode #environments input:not(input.AC-temp-display),
+body.darkmode #environments .environment-preference-button,
+body.darkmode #stores input:not(input.AC-temp-display),
+body.darkmode #stores .environment-preference-button,
+body.darkmode h1 input:not(input.AC-temp-display),
+body.darkmode h1 .environment-preference-button,
+body.darkmode .add-user-window input {
+  background-color: rgba(99, 99, 99, 0.7);
+  color: white;
+}
+
+body.darkmode #general-home-preferences select,
+body.darkmode #routine-window select,
+body.darkmode #environments select,
+body.darkmode #stores select,
+body.darkmode h1 select,
+body.darkmode #add-user-window #environmentsSelectSelect {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>') no-repeat right rgb(99, 99, 99);
+  background-position: right 10px center;
+  color: white;
+}
+
+body.darkmode #general-home-preferences select:focus,
+body.darkmode #routine-window select:focus,
+body.darkmode #environments select:focus,
+body.darkmode #stores select:focus,
+body.darkmode h1 select:focus,
+body.darkmode #add-user-window #environmentsSelectSelect:focus {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-chevron-up" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/></svg>') no-repeat right rgb(99, 99, 99);
+  background-position: right 10px center;
+}
+
+body.darkmode select:disabled {
+  background: gray !important;
+}
+
+body.darkmode input::-moz-placeholder {
+  color: lightgray;
+}
+
+body.darkmode input::placeholder {
+  color: lightgray;
+}
+
+body.darkmode .add-environment-checkmark {
+  color: #00ff00 !important;
+}
+
+body.darkmode #return-from-page-button {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+body.darkmode #return-from-page-button path {
+  fill: white;
+}
+
+body.darkmode #logo {
+  background-color: rgba(255, 166, 0, 0.7);
+}
+
+body.darkmode #card-method-choice-button,
+body.darkmode #cash-method-choice-button {
+  background-color: white;
+  color: black;
+}
+
+body.darkmode #search-wrapper p,
+body.darkmode #search-wrapper div,
+body.darkmode #search-wrapper input,
+body.darkmode #search-wrapper label {
+  color: white;
+}
+
+body.darkmode #search-wrapper #search-products-input, body.darkmode #slider_thumb {
+  background-color: rgb(99, 99, 99);
+  color: white;
+}
+
+body.darkmode #search-wrapper #search-products-input path {
+  color: white;
+}

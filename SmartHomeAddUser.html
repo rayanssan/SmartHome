@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./styles/addingUser.css">
+	<link rel="stylesheet" href="./styles/mediaqueries.css">
+	<link rel="stylesheet" href="./styles/animations.css">
+	<link rel="stylesheet" href="./styles/stylesheet.css">
+	<title>SmartHome | Create Profile</title>
+	<link rel="icon" href="./media/images/logo.png">
+</head>
+
+<!-- Body of the website -->
+
+<body id="SmartHomeAddUserPage" class="loading-animation">
+
+	<header>
+		<nav>
+			<div class="nav-wrapper">
+				<a id="return-from-page-button" href="SmartHomeProfiles.html">
+					<svg class="svg-icon"
+						style="width: 1em; margin: auto; transform: scale(1.2); display: flex; height: 1em;fill: currentColor;overflow: hidden;"
+						viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M810.666667 469.333333H304.64l154.88-186.026666a42.666667 
+							42.666667 0 1 0-65.706667-54.613334l-213.333333 256a50.773333 
+							50.773333 0 0 0-3.84 6.4c0 2.133333 0 3.413333-2.986667 5.546667A42.666667 
+							42.666667 0 0 0 170.666667 512a42.666667 42.666667 0 0 0 2.986666 15.36c0 
+							2.133333 0 3.413333 2.986667 5.546667a50.773333 50.773333 0 0 0 3.84 6.4l213.333333 
+							256A42.666667 42.666667 0 0 0 426.666667 810.666667a42.666667 42.666667 0 0 0 
+							27.306666-9.813334 42.666667 42.666667 0 0 0 5.546667-60.16L304.64 
+							554.666667H810.666667a42.666667 42.666667 0 0 0 0-85.333334z"
+							fill="#231F20" />
+					</svg>
+				</a>
+				<div id="logo" onclick="location.reload()"><img src="./media/images/logo.png" alt="SmartHome Logo">
+					<p>SmartHome</p>
+				</div>
+			</div>
+			<div class="nav-wrapper">
+				<div id="current-time"></div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+
+        <div id="content-windows">
+
+			<div class="windows">
+
+				<!-- Adding User Window-->
+
+				<div class="add-user-window window" id="add-user-window">
+
+					<p class="addUser-text">Create New Profile</p>
+
+					<form class="addingUser" id="addingUser">
+
+						<div class="form-group" id="formUser">
+							<input type="text" placeholder=" " name="nameInput" id="nameInput">
+							<label>Name of the new user</label>		
+						</div>
+
+						<br>
+						
+						<div id="formAdminConfirm">
+							<label class="admin">Mark this box if the new user is the administrator
+								<input onclick="checkCheckBox();" type="checkbox" name="admin" id="admin">
+								<span class="checkmark"></span>
+							</label>
+						</div>
+
+						<fieldset id="environmentsSelect" class="environmentsSelect">
+							<legend>Allowed environments</legend>
+						</fieldset>
+
+						<!--
+						<div id="environmentButton">
+							<p class="subp">*to pick environments click the button below</p>
+							<button class="link_env" id="environmentsW" onclick="showEnvironments()">See the list of environments</button>
+						</div>
+						-->
+
+						<div id="permissionButton">
+							<p class="subp">*to give permissions click the button below</p>
+							<button class="link_perm" id="permissions" onclick="showPermissions()">See the list of permissions</button>
+						</div>
+
+						<div id="iconButton">
+							<p class="subp">*to choose your avatar click the button below</p>
+							<button class="link_icon" id="icons" onclick="showIcons()">See the list of avatars</button>
+						</div>
+
+						<button id="addButton" type="submit" disabled onclick="createUser()"></button>
+
+					</form>
+
+				</div>
+
+				<!-- Permissions window -->
+
+				<div class="add-permission-window window" id="add-permission-window">
+
+					<p class="addUser-text">Pick the permissions you want to give</p>
+
+					<div id="permissionsList">
+
+						<div class ="perm">
+							<button id="climatePermission" onclick="validatePermission(this.id)">Climate</button>
+							<button id="lightsPermission" onclick="validatePermission(this.id)">Lights</button>
+							<button id="blindsPermission" onclick="validatePermission(this.id)">Blinds</button>
+						</div>
+
+						<div class ="perm">
+							<button id="vacuumPermission" onclick="validatePermission(this.id)">Vacuum Robot</button>
+							<button id="TVPermission" onclick="validatePermission(this.id)">TV</button>
+							<button id="fireplacePermission" onclick="validatePermission(this.id)">Fireplace</button>
+							<button id="smartClosetPermission" onclick="validatePermission(this.id)">Smart Closet</button>
+						</div>
+
+						<div class ="perm">
+							<button id="assistantPermission" onclick="validatePermission(this.id)">SmartHome Assistant</button>
+							<button id="groceriesPermission" onclick="validatePermission(this.id)">SmartHome Groceries</button>
+							<button id="routinesPermission" onclick="validatePermission(this.id)">SmartHome Routines</button>
+						</div>
+		
+					</div>
+
+					<br>
+
+					<div class="confirmButtonWrapper">
+						<button class="link_perm confirmButton">Confirm</button>
+						<button class="link_perm confirmButton" id="perm-cancel" style="background-color: red;">Cancel</button>
+					</div>
+
+				</div>
+
+				<!-- Icons window -->
+
+				<div class="add-icon-window window" id="add-icon-window">
+
+					<p class="addUser-text">Pick your avatar</p>
+
+					<div id="iconsList">
+
+						<div>
+							<button id="user1Button" onclick="validateIcon(this.id)">
+								<img id="user1" src="./media/images/man.png" alt="man icon">
+							</button>
+						</div>
+			
+						<!-- 2º Botao de User -->
+						<div>
+							<button id="user2Button" onclick="validateIcon(this.id)">
+								<img id="user2" src="./media/images/woman.png" alt="woman icon">
+							</button>
+						</div>
+						<!-- 3º Botao de User -->
+						<div>
+							<button id="user3Button" onclick="validateIcon(this.id)">
+								<img id="user3" src="./media/images/student.png" alt="student icon">
+							</button>
+						</div>
+		
+					</div>
+
+					<br>
+
+					<div class="confirmButtonWrapper">
+						<button class="link_icon confirmButton">Confirm</button>
+						<button class="link_icon confirmButton" id="icon-cancel" style="background-color: red;">Cancel</button>
+					</div>
+
+				</div>
+
+			</div>
+			
+		</div>
+
+	</main>
+
+	<footer>
+		<div id="settings"><img src="media/images/settings-icon.png" alt="Settings icon">
+			<div></div>
+		</div>
+		<div id="more-info"><p>?</p></div>
+		<select id="language-select">
+			<option value="en">English</option>
+			<option value="pt">Português</option>
+		</select>
+	</footer>
+
+	<script src="scripts/main.js"></script>
+	<script src="scripts/language.js"></script>
+	<script src="scripts/settings.js"></script>
+	<script src="scripts/time.js"></script>
+	<script src="scripts/addingUser.js"></script>
+	<script src="scripts/profile.js"></script>
+	
+</body>
+
+</html>

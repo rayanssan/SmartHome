@@ -1,0 +1,123 @@
+#profileHomepage{
+  background-image: url("../media/images/living-room.jpg");
+}
+
+#profileContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 10px;
+  z-index: auto;
+  flex-wrap: wrap;
+  & button, & a button {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+#buttonImage{
+  height: 100%;
+  width: 100%;
+}
+
+#addProfile{
+  height: 100px;
+  width: 100px;
+}
+
+#add-profile-button {
+  scale: 1.4;
+}
+
+#profileMenu{
+  visibility: hidden;
+}
+
+#profileMenu .show{
+  visibility: visible;
+}
+
+#user1Button{
+  height: 100px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name-display {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px;
+  max-width: 90px;
+  overflow: auto;
+  text-overflow: ellipsis;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+#user1{
+  height: 100%;
+  width: 100%;
+}
+
+#user2Button{
+  height: 100px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+#user2{
+  height: 100%;
+  width: 100%;
+}
+
+#user3Button{
+  height: 100px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+}
+#user3{
+  height: 100%;
+  width: 100%;
+}
+
+#profileContainer div:nth-child(3) {
+  display: none;
+}
+
+#caption1{
+  display: block;
+}
+
+#formUser{
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 50px;
+}
+
+label{
+  margin-right: 10px;
+}
+
+#formPIN, #formPINconfirm, #permissionButton{
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 30px;
+
+}
+
+#permissionsList{
+  display: none;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+}
+
+

@@ -1,0 +1,214 @@
+/* This stylesheet contains only styles related to the fireplace functionality */
+
+:root {
+  --defaultColor: #0000FF;
+  --color: #0000FF;
+}
+
+.fireplace-window {
+	margin-top: -10px;
+  zoom: 0.9;
+}
+
+.fireplace-window .fireplace-submit-button {
+  margin: auto;
+  margin-top: 25px;
+  background-color: green;
+  width: 100%;
+  color: white;
+}
+
+.fireplace-power-button:not(.preference, .environment, .return-button, .paddle, .climate-submit-button) {
+  width: 185px;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 100px;
+}
+
+.fireplace-window input[type="color"] {
+  border: none;
+  display: block;
+  background: none;
+  cursor: pointer;
+  height: 65px;
+  width: 185px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.fireplace-window input[type="color"]::-webkit-color-swatch {
+  border: 2px solid orange;
+  border-radius: 50px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+}
+.fireplace-window input[type="color"]:-webkit-color-swatch:hover {
+  filter: drop-shadow(0 0 0.75rem rgb(255, 205, 106));
+}
+.fireplace-window input[type="color"]::-webkit-color-swatch:active {
+  filter: drop-shadow(0 0 0.75rem orange);
+}
+
+.fireplace-flame {
+  padding: max(6vw, 1px);
+  background: #000000;
+  border-radius: 40px;
+
+  & input {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+}
+
+.zone-wrap {
+  overflow: hidden;
+  padding: 10px;
+  background: #000000;
+  filter: brightness(1.6) contrast(10);
+}
+
+.zone {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 30px auto;
+  filter: blur(18px);
+}
+
+.magnets {
+  background: #000;
+  white-space: nowrap;
+}
+
+.magnets div {
+  position: absolute;
+  display: block;
+  width: 80px;
+  height: 30px;
+  border-radius: 30%;
+  background: transparent;
+}
+
+.magnets div:nth-child(1) {
+  top: 0;
+  box-shadow: 0 0 90px var(--color);
+  -webkit-animation: clockwise 3.14s linear infinite;
+          animation: clockwise 3.14s linear infinite;
+}
+
+.magnets div:nth-child(2) {
+  top: 0;
+  left: -20px;
+  box-shadow: 0 0 70px var(--color);
+  -webkit-animation: counter-clockwise 4s linear infinite;
+          animation: counter-clockwise 4s linear infinite;
+}
+
+.magnets div:nth-child(3) {
+  top: 0;
+  left: 20px;
+  box-shadow: 0 0 70px var(--color);
+  -webkit-animation: clockwise 1.9s linear infinite;
+          animation: clockwise 1.9s linear infinite;
+}
+
+.magnets div:nth-child(4) {
+  top: -15px;
+  box-shadow: 0 0 800px var(--color);
+  -webkit-animation: counter-clockwise 2.71s linear infinite;
+          animation: counter-clockwise 2.71s linear infinite;
+}
+
+.magnets div:nth-child(5) {
+  width: 10px;
+  height: 10px;
+  top: 20px;
+  left: -65px;
+  box-shadow: 0 0 50px var(--color);
+  -webkit-animation: counter-clockwise 3.71s linear infinite;
+          animation: counter-clockwise 3.71s linear infinite;
+}
+
+.magnets div:nth-child(6) {
+  width: 10px;
+  height: 10px;
+  top: 20px;
+  left: 65px;
+  box-shadow: 0 0 50px var(--color);
+  -webkit-animation: clockwise 4.71s linear infinite;
+          animation: clockwise 4.71s linear infinite;
+}
+
+.sphere {
+  background: #000;
+  white-space: nowrap;
+}
+
+.sphere .core {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--color);
+  border-bottom: 15px solid white;
+}
+
+@-webkit-keyframes clockwise {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(-40px, -40px);
+  }
+  50% {
+    transform: translate(0px, -80px);
+  }
+  75% {
+    transform: translate(40px, -40px);
+  }
+}
+
+@keyframes clockwise {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(-40px, -40px);
+  }
+  50% {
+    transform: translate(0px, -80px);
+  }
+  75% {
+    transform: translate(40px, -40px);
+  }
+}
+
+@-webkit-keyframes counter-clockwise {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(40px, -40px);
+  }
+  50% {
+    transform: translate(0px, -80px);
+  }
+  75% {
+    transform: translate(-40px, -40px);
+  }
+}
+
+@keyframes counter-clockwise {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(40px, -40px);
+  }
+  50% {
+    transform: translate(0px, -80px);
+  }
+  75% {
+    transform: translate(-40px, -40px);
+  }
+}

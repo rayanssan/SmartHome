@@ -1,0 +1,207 @@
+/* This stylesheet contains only styles related to the routines functionality */
+
+#routine {
+  padding: 10px;
+  margin: 0px;
+  display: flex;
+  height: 100px;
+  justify-content: flex-start;
+  overflow: auto;
+  gap: 2px;
+  width: 100%;
+  flex-direction: column;
+}
+
+#routine:not(#routine:has(li)) {
+  justify-content: center;
+}
+
+#routinesWindow #routine {
+  max-height: 200px;
+}
+
+#routineForm {
+  padding-top: 10px;
+
+  & input[type=checkbox], input[type=radio] {
+    scale: 2.2;
+    transform: translate(-2px, -2px);
+    margin-bottom: 15px;
+    margin-left: 10px;
+  }
+  & input[type=checkbox] + label {
+    left: 2px;
+    position: relative;
+  }
+  & fieldset input[type=checkbox]:last-of-type, fieldset input[type=radio]:last-of-type {
+	margin-bottom: 5px;
+  }
+  & details input[type=checkbox]:first-of-type {
+    margin-top: 15px;
+  }
+  & details input[type=checkbox]+label {
+	position: relative;
+    top: -2px;
+  }
+  & input[type=range] {
+	 margin-bottom: 5px;
+    transform: scale(1.3);
+  }
+}
+
+#routine-text {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#routine li, #routineList li {
+  list-style-type: none;
+  background-color: rgba(128, 0, 128, 0.65);
+  padding:5px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.routine-list-buttons-wrapper {
+  display: flex;
+
+  & button {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+#routine li button {
+  display: none;
+}
+
+#routine li p {
+  color: white;
+  font-size: 14px;
+}
+
+#routineList li p {
+  color: white;
+  max-width: 80%;
+}
+
+#activitybox,
+#listbox {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: lighter;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 10px;
+  border-radius: 10px;
+  width: 85vw;
+  max-width: 640px;
+  height: fit-content;
+  margin: 10px;
+  position: relative;
+  transition: all ease-out 0.3s;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+#listbox {
+  max-height: 300px;
+  overflow: auto;
+}
+
+#listbox button:not(.confirmation-box button) {
+  background-color: red;
+  color: white;
+  border-radius: 100px;
+}
+
+ul {
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px;
+}
+
+#tempdemo {
+  width: 40px;
+  padding-left: 0px;
+  margin-left: 0;
+  margin-top: 0;
+  font-size: 25px;
+}
+
+#tempdemo + span {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+#activitybox {
+  background: rgba(255, 255, 255, 0.7);
+  text-align:left;
+  margin-top: 0;
+}
+
+#activitybox #set-activity-text {
+  margin-left: 42px;
+  font-size: larger;
+}
+
+#activitybox:has(.confirmation-box) {
+  padding: 10px;
+}
+
+#set-routine-button {
+  margin: auto;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  width: 75%;
+}
+
+input[type="range"], input[type="radio"], input[type="checkbox"] {
+  box-shadow: none;
+  vertical-align: sub;
+  padding: 0;
+}
+
+input[type="checkbox"] {
+  padding: 10px
+}
+
+#task_forms{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  gap: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+fieldset {
+  max-width: 500px;
+  display: block;
+  border-radius: 10px;
+}
+
+#activity-fieldsets {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+#clearLocalStorageBtn {
+  background-color: red;
+  color: white;
+}

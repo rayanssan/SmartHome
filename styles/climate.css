@@ -1,0 +1,96 @@
+/* This stylesheet contains only styles related to the climate functionality */
+
+.climate-window {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 0;
+}
+
+.climate-window select {
+  width: 40%;
+  min-width: 200px;
+}
+
+#environment-selection .climate-window p:not(.add-products-text) {
+  width: unset;
+}
+
+.AC-temp-display {
+  border: none;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: 0;
+  margin-left: -20px;
+  height: 35px;
+  text-align: center;
+  background: none;
+  cursor: auto;
+  padding: 0;
+  box-shadow: none;
+  width: 100px;
+  min-width: unset;
+  width: 60px;
+}
+
+.AC-temp-window {
+  display: flex;
+  flex-direction: row;
+  width: -moz-min-content;
+  width: min-content;
+  align-items: center;
+}
+
+.climate-window p {
+  font-size: clamp(13px, 5vw, 17.5px);
+  text-align: center;
+}
+
+.AC-temp-up,
+.AC-temp-down,
+.AC-power-button {
+  width: 35px;
+  height: 35px;
+  font-size: 25px;
+  justify-content: center;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+  align-items: center;
+}
+
+.AC-fan-wrapper .fan-speed-option {
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+}
+
+.AC-power-button {
+  width: 185px;
+  padding: 20px;
+  border-radius: 100px;
+}
+
+.climate-window-lower-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.climate-window-lower-wrapper select {
+  min-width: 200px;
+}
+
+.climate-window button.climate-submit-button {
+  background: green;
+  color: white;
+  width: 70%;
+  min-width: 100px;
+}

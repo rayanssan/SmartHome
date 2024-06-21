@@ -1,0 +1,29 @@
+/* This stylesheet contains only styles related to the blinds functionality */
+
+.blinds-window {
+  display: flex;
+  width: 85vw;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.blinds-window select {
+  width: 90%;
+  min-width: 200px;
+}
+
+#environment-selection .blinds-window p:not(.add-products-text) {
+  width: unset;
+}
+
+.blinds-window button.blinds-submit-button {
+  background-color: green;
+  width: 70%;
+  color: white;
+}
+
+#blinds-range-container {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}

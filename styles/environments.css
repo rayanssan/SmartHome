@@ -1,0 +1,518 @@
+/* This stylesheet contains only styles related to the environments functionality */
+
+/* Environment icons */
+.environment .living-room {
+  background-image: url("../media/images/living-room-icon.png"), linear-gradient(45deg, #09097b, #969696);
+}
+
+#add-living-room-button {
+  background-image: url("../media/images/living-room-icon.png");
+}
+
+.environment .kitchen {
+  background-image: url("../media/images/kitchen-icon.png"), linear-gradient(45deg, #09097b, #969696);
+}
+
+#add-kitchen-button {
+  background-image: url("../media/images/kitchen-icon.png");
+}
+
+.environment .bedroom {
+  background-image: url("../media/images/bedroom-icon.png"), linear-gradient(45deg, #09097b, #969696);
+}
+
+#add-bedroom-button {
+  background-image: url("../media/images/bedroom-icon.png");
+}
+
+.environment .bathroom {
+  background-image: url("../media/images/bathroom-icon.png"), linear-gradient(45deg, #09097b, #969696);
+}
+
+#add-bathroom-button {
+  background-image: url("../media/images/bathroom-icon.png");
+}
+
+.environment .office {
+  background-image: url("../media/images/office-icon.png"), linear-gradient(45deg, #09097b, #969696);
+}
+
+#add-office-button {
+  background-image: url("../media/images/office-icon.png");
+}
+
+/* ------ */
+
+#expand-environments-button, #edit-environment-button {
+  height: 30px;
+  width: 30px;
+}
+
+.environment-button-text {
+  padding-bottom: 5px;
+}
+
+#expand-environments-button svg {
+  transform: scale(1.4);
+  filter: contrast(0.5);
+}
+
+#edit-environment-button svg {
+  transform: scale(1.4);
+}
+
+div #edit-environment-button {
+  display: none;
+}
+
+#environment-selection {
+  justify-content: start;
+  align-items: start;
+  margin: auto;
+  overflow-x: auto;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-bottom: 30px;
+  grid-auto-flow: column;
+  margin-top: 0;
+}
+
+#environments .expanded-environments-view {
+  grid-auto-flow: unset;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+#environments:has(.expanded-environments-view) {
+  max-width: -moz-min-content;
+  max-width: min-content;
+  min-width: 300px;
+
+  & #environment-selection {
+    padding: 10px;
+  }
+}
+
+body:has(.no-environments) #environments {
+  flex-direction: column;
+  & .environment::before {
+    margin: auto;
+    margin-bottom: 15px;
+  }
+  & #expand-environments-button {
+    display: none;
+  }
+  & #environment-selection {
+    padding-bottom: 0;
+  }
+}
+
+html[lang=en] {
+  & body:has(.no-environments) #environments {
+    & .environment::before {
+      content: "No environments yet..."
+    }
+  }
+} 
+
+html[lang=pt] {
+  & body:has(.no-environments) #environments {
+    & .environment::before {
+      content: "Nenhum ambiente ainda..."
+    }
+  }
+}
+
+body:has(.no-environments) {
+  & .preference:has(#blinds-button) {
+    display: none;
+  }
+  & .preference:has(#lights) {
+    display: none;
+  }
+  & .preference:has(#vacuum-robot) {
+    display: none;
+  }
+  & .preference:has(#climate) {
+    display: none;
+  }
+  & #general-home-preferences-selection {
+    display: flex;
+    justify-content: center;
+    & .preference p {
+      width: 100px;
+    }
+  }
+  & #routine-window, & #climate-stats {
+    display: none;
+  }
+}
+
+#environments:has(.climate-window) {
+  flex-direction: column;
+}
+
+#environments:has(.expanded-environments-view) .confirmation-box {
+  width: 70vw;
+  max-width: 540px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#environments:has(.confirmation-box) {
+  padding-bottom: max(1vw, 10px);
+}
+
+#environments:has(.environment-preference-button) {
+  max-width: 540px;
+}
+
+#environment-selection p:not(.add-products-text, #add-environments-selection p, .climate-window p, .lights-window p, .blind-window p) {
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 80px;
+}
+
+.environment-preference-button {
+  width: 100vw;
+  min-width: 200px;
+  padding: 10px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+.environment:last-of-type > div {
+  border-radius: 100px;
+  padding: 0;
+}
+
+.environment:last-of-type {
+  text-align: center;
+  padding: 9px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+#environments .add-environment-window {
+  display: flex;
+  justify-content: center;
+}
+
+#environments:has(.add-environment-window) {
+  max-width: 540px;
+}
+
+#add-environment-form { 
+  padding-top: 20px;
+}
+
+#add-environments-selection {
+  margin-top: 15px;
+  padding: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#add-products-selection {
+  flex-direction: column;
+  width: 100%;
+  margin: 5px;
+}
+
+button:has(.number-input-wrapper) .add-environment-checkmark {
+  margin-left: -10px;
+}
+
+.environment .bathroom,
+.environment .living-room,
+.environment .kitchen,
+.environment .bedroom,
+.environment .office {
+  max-width: 60px;
+  max-height: 60px;
+}
+
+#environments:has(#smart-pantry-functionality-wrapper) {
+  max-width: 1100px;
+}
+
+#smart-pantry-functionality-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.kitchen-groceries-button {
+  background-image: url("../media/images/groceries-icon.png"), linear-gradient(45deg, #701616, #d63784);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 65%, cover;
+  position: absolute;
+  right: 13px;
+  top: 13px;
+  height: 50px;
+  width: 50px;
+}
+
+.kitchen-suggestions-shop-button:not(.preference, .environment, .return-button, .paddle, .climate-submit-button) {
+  background-image: linear-gradient(45deg, #701616, #d63784);
+  color: white;
+  margin: 0;
+  padding: 20px;
+  min-width: 40px;
+  min-height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 0;
+  background-size: 85%, cover;
+  background-image: url(../media/images/groceries-icon.png), linear-gradient(45deg, #701616, #d63784);
+}
+
+#smart-pantry-functionality-wrapper details {
+  max-width: 850px;
+  overflow: hidden;
+  margin-bottom: 10px;
+
+  & summary {
+    text-align: left;
+    width: 60vw;
+  }
+}
+
+#smart-pantry-functionality-wrapper details div#kitchen-groceries-suggestions {
+  display: flex;
+  overflow: auto;
+  justify-items: start;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 66vw;
+  padding-bottom: 15px;
+  margin: auto;
+}
+
+.pantry-products-display {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  overflow: auto;
+  max-height: 550px;
+  width: 100%;
+  zoom: 0.95;
+}
+
+#smart-pantry-functionality-wrapper .pantry-products-display div,
+#smart-pantry-functionality-wrapper #kitchen-groceries-suggestions div {
+  margin: 5px;
+  width: 200px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+#smart-pantry-functionality-wrapper .pantry-products-display div p:not(.add-products-text, #add-environments-selection p, .climate-window p),
+#smart-pantry-functionality-wrapper #kitchen-groceries-suggestions div p:not(.add-products-text, #add-environments-selection p, .climate-window p) {
+  margin: auto;
+  font-size: large;
+  margin-top: 5px;
+  width: -moz-fit-content;
+  width: 180px;
+  overflow: visible;
+}
+
+#smart-pantry-functionality-wrapper .pantry-products-display div img, #smart-pantry-functionality-wrapper #kitchen-groceries-suggestions div img {
+  width: 95%;
+  margin: auto;
+  border: 2px solid rgba(0, 0, 0, 0.4705882353);
+  border-radius: 10px;
+}
+
+#smart-pantry-functionality-wrapper #kitchen-groceries-suggestions div img {
+  border: 2px solid #701616;
+}
+
+#kitchen-groceries-suggestions .grocery-product-name {
+  align-items: flex-start;
+  margin-top: 8px;
+}
+
+.kitchen-smart-pantry-product {
+  perspective: 1000px;
+}
+
+.kitchen-smart-pantry-product-front,
+.kitchen-smart-pantry-product-back {
+  transition: transform 0.5s ease;
+}
+
+.kitchen-smart-pantry-product-back {
+  transform: rotateY(180deg);
+  display: none;
+}
+
+#smart-pantry-functionality-wrapper .kitchen-smart-pantry-product div.grocery-product-description.kitchen-smart-pantry-product-back {
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 260px;
+  width: 95%;
+  border: 2px solid rgba(0, 0, 0, 0.4705882353);
+  border-radius: 10px;
+
+  & .return-button {
+    margin: 5px;
+  }
+  
+  & div {
+    margin: auto;
+    overflow-y: auto;
+    margin-top: 40px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    width: 100%;
+    text-align: left;
+  }
+
+  & p:not(.add-products-text, #add-environments-selection p, .climate-window p) {
+    font-size: 15px;
+  }
+}
+
+.kitchen-smart-pantry-product {
+  perspective: 1000px;
+  width: fit-content;
+}
+
+.kitchen-smart-pantry-product-back {
+  display: none;
+}
+
+#select-kitchen-product-element {
+  width: 40%;
+  min-width: 200px;
+  margin-top: 25px;
+}
+
+#add-environment-button {
+  width: 10vw;
+  height: 10vw;
+  max-width: 70px;
+  padding: 10px;
+  max-height: 70px;
+  min-width: 70px;
+  min-height: 70px;
+}
+
+#add-bedroom-button,
+#add-bathroom-button,
+#add-kitchen-button,
+#add-living-room-button,
+#add-office-button {
+  background-color: rgba(0, 0, 0, 0.7);
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  width: 70px;
+  height: 70px;
+  position: relative;
+  justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+#add-bedroom-button:hover,
+#add-bathroom-button:hover,
+#add-kitchen-button:hover,
+#add-living-room-button:hover,
+#add-office-button:hover {
+  filter: drop-shadow(0 0 0.75rem rgb(255, 205, 106));
+}
+
+#add-bedroom-button:active,
+#add-bathroom-button:active,
+#add-kitchen-button:active,
+#add-living-room-button:active,
+#add-office-button:active {
+  filter: drop-shadow(0 0 0.75rem orange);
+}
+
+#add-environments-selection p {
+  font-size: clamp(13px, 5vw, 15px);
+  text-align: center;
+  width: 70px;
+}
+
+#add-environments-selection > div {
+  padding-top: 5px;
+}
+
+#add-products-selection > button,
+#submit-environment-button {
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+  flex-wrap: wrap;
+}
+
+.add-products-text {
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+#submit-environment-button {
+  background-color: green;
+  color: white;
+  width: 98%;
+}
+
+#environment-selection #edit-environment-form details p {
+  font-size: 20px;
+}
+
+#edit-environment-details-settings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#edit-environment-form {
+  padding-top: 15px;
+}
+
+#environments #environment-selection:has(#edit-environment-form) {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+#edit-environment-form details {
+  width: 70vw;
+  max-width: 500px;
+  min-width: 90px;
+  margin: auto;
+
+  & input:not(.form-group input) {
+    margin-top: unset;
+    width: 30px;
+  }
+  & label {
+    margin-top: 10px;
+  }
+  & summary {
+    text-align: left;
+  }
+  & button, & >div {
+    margin: auto;
+  }
+  & button {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    width: 75%;
+  }
+  & button:not(#delete-environment-button) {
+    background-color: red;
+    color: white;
+  }
+}

@@ -1,0 +1,117 @@
+
+@media screen and (max-width: 1166px) {
+    #routine-window {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #cart-view {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #environments .expanded-environments-view {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .kitchen-groceries-button span {
+        display: none;
+    }
+
+    #SmartHomeGroceriesPage #grocery-product-description {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    #cart-view>div, #credit-card-form {
+        width: 100%;
+    }
+
+    .edit-environment-products-list div {
+        justify-content: space-around;
+        gap: 10px;
+        flex-direction: column;
+
+        & div {
+            flex-direction: row;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #environments .expanded-environments-view {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    header nav #logo p {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cart-item {
+        gap: unset;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    #environments-outer-window {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #general-home-preferences-selection,
+    #add-environments-selection {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #current-time {
+        font-size: 13px;
+    }
+
+}
+
+@media screen and (max-width: 380px) {
+    #profiles {
+        width: 55%;
+    }
+
+	.nav-wrapper {
+        flex-wrap: wrap;
+	}
+
+    #cart-view {
+        top: 110px;
+    }
+
+    #environments .expanded-environments-view {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    #environments:has(.expanded-environments-view) {
+        min-width: 200px;
+    }
+
+    #SmartHomeGroceriesPage, #SmartHomeHelpPage {
+        & #current-time {
+        width: 77%;
+        }
+        & #return-from-page-button {
+        width: 65%;
+        }
+        & .nav-wrapper {
+            justify-content: flex-start
+        }
+        & #stores-selection {
+            zoom: 0.8;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+/* This stylesheet contains only styles related to the vacuum robot functionality */
+
+#vacuum-robot-window {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 0;
+}
+
+#vacuum-robot-window select {
+  width: 40%;
+  min-width: 200px;
+}
+
+#vacuum-robot-window button#vacuum-robot-submit-button {
+  background-color: green;
+  width: 70%;
+  color: white;
+}
